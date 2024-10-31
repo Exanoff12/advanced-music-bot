@@ -28,21 +28,21 @@ client.manager = new Manager({
      })]
 });
 
-const translate = require('node-google-translate-skidz');
-client.translate = async function (guild, text) {
-    try {
-        var data = db.get(`language-${guild}`);
-        var res;
-        if (!data) res = text;
-        if (data) {
-            var trans = await translate({ text: `${text}`, source: `tr`, target: `${data}` })
-            res = trans.translation;
-        }
-        return res;
-    } catch (error) {
-        return text
-    }
-}
+//const translate = require('node-google-translate-skidz');
+//client.translate = async function (guild, text) {
+//    try {
+//        var data = db.get(`language-${guild}`);
+//        var res;
+//        if (!data) res = text;
+//        if (data) {
+//            var trans = await translate({ text: `${text}`, source: `tr`, target: `${data}` })
+//            res = trans.translation;
+//        }
+//        return res;
+//    } catch (error) {
+//        return text
+//    }
+//}
 
 
 client.on("raw", (d) => client.manager.updateVoiceState(d));
