@@ -8,11 +8,16 @@ module.exports = {
     args: false,
    execute: async (message, args, client, prefix) => {
   
-    var l1 = await client.translate(message.guild.id,`Müzik Komutları`)
-    var l2 = await client.translate(message.guild.id,`Diğer Komutlar`)
-    var l3 = await client.translate(message.guild.id,"Yardım Menüsü")
-    var l4 = await client.translate(message.guild.id,"Bot Tüm Dilleri Desteklemektedir!")
-    var l5 = await client.translate(message.guild.id,`Altyapı Hakkında Bilgi`)
+    //var l1 = await client.translate(message.guild.id,`Müzik Komutları`)
+    //var l2 = await client.translate(message.guild.id,`Diğer Komutlar`)
+    //var l3 = await client.translate(message.guild.id,"Yardım Menüsü")
+    //var l4 = await client.translate(message.guild.id,"Bot Tüm Dilleri Desteklemektedir!")
+    //var l5 = await client.translate(message.guild.id,`Altyapı Hakkında Bilgi`)
+    var l1 = ""
+    var l2 = ""
+    var l3 = ""
+    var l4 = ""
+    var l5 = ""
     const menu = new ActionRowBuilder()
     .addComponents([
     new StringSelectMenuBuilder()
